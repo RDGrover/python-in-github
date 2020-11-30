@@ -19,6 +19,17 @@ def about():
     return render_template("about.html", page_title="About", company=data)
 
 
+@app.route("/about/<dwarf_name>")
+def about_dwarf(dwarf_name):
+    dwarf = {}
+    with open("data/company.json", "r")as json_data:
+        data = json.load(json_data)
+        for object in data:
+            if object["url"] == dwarf_name:
+                dwarf = object
+    return render_template("dwarf.html", dwarf=dwarf)
+
+
 @app.route("/contact")
 def contact():
     return render_template("contact.html", page_title="Contact")
