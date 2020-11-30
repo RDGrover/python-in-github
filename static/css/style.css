@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=MedievalSharp:100,200,300,400,500,600,700");
+
 .col-md-5 img {
     width: 100%;
+}
+
+.flashes {
+    color: #d10000;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-family: "MedievalSharp", sans-serif;
+    font-weight: 700;
+    list-style-type: none;
 }
