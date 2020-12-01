@@ -36,8 +36,8 @@ def about_dwarf(dwarf_name):
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
-        flash("We have heard your call to adventure {}, tonight we fly to your side.".format(
-            request.form.get("name")))
+        flash(
+            "We have heard your call {}.".format(request.form.get("name")))
     return render_template("contact.html", page_title="Contact")
 
 
